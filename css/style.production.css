@@ -50,7 +50,7 @@ a {
 }
 
 a:active {
-  color: #489c79;
+  color: var(--third-color);
 }
 
 a:hover {
@@ -67,22 +67,32 @@ li {
 }
 
 button,
-.btn {
+.main-btn,
+.secondary-btn {
   /* overwrites browser defaults and resets the border */
   border: none;
   /* takes the font from the outer container */
+  background-image: -webkit-gradient(
+    linear,
+    left top,
+    right top,
+    from(#3d405b),
+    to(#f2cc8f)
+  );
+  background-image: -o-linear-gradient(left, #3d405b 0%, #f2cc8f 100%);
+  background-image: linear-gradient(to right, #3d405b 0%, #f2cc8f 100%);
   font-family: inherit;
   display: inline-block;
-  background-color: var(--third-color);
   text-decoration: none;
   color: rgb(255, 250, 250);
   padding: 10px;
-  border-radius: 3px;
+  border-radius: 10px;
   border-bottom: 2px solid rgba(0, 0, 0, 0.3);
   -webkit-transition: 0.2s opacity;
   -o-transition: 0.2s opacity;
   transition: 0.2s opacity;
 }
+
 button:hover,
 button:focus,
 .btn:hover,
@@ -90,6 +100,8 @@ button:focus,
   cursor: pointer;
   opacity: 0.8;
 }
+
+/* Navigation */
 
 .navigation-list_item--active {
   text-decoration: none;
@@ -100,9 +112,7 @@ button:focus,
   margin-left: 15px;
   text-transform: uppercase;
 }
-.profile-section a {
-  text-decoration: none;
-}
+
 .logo_item {
   margin: 0 auto;
   position: relative;
@@ -110,10 +120,26 @@ button:focus,
   text-transform: uppercase;
   width: 250px;
   height: 100px;
+  display: inline-block;
+  /* gradient color styling */
+  background: -webkit-gradient(
+    linear,
+    left top,
+    right top,
+    from(#3d405b),
+    to(#f2cc8f)
+  );
+  background: -o-linear-gradient(left, #3d405b 0%, #f2cc8f 100%);
+  background: linear-gradient(to right, #3d405b 0%, #f2cc8f 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 .logo_item a {
   text-decoration: none;
 }
+
+/* End */
 
 /* section styling */
 
@@ -123,13 +149,55 @@ button:focus,
   max-width: 700px;
   margin: 0px auto;
 }
-
+.profile-section a {
+  text-decoration: none;
+}
 .profile_portrait {
   float: left;
   width: 350px;
   margin-right: 40px;
+  margin-top: 25px;
   border-radius: 50%;
 }
+
+/* Title styling */
+
+.profile_title,
+.work_title {
+  display: inline-block;
+  /* gradient color styling */
+  background: -webkit-gradient(
+    linear,
+    left top,
+    right top,
+    color-stop(30%, #3d405b),
+    to(#f2cc8f)
+  );
+  background: -o-linear-gradient(left, #3d405b 30%, #f2cc8f 100%);
+  background: linear-gradient(to right, #3d405b 30%, #f2cc8f 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.about_title,
+.contact_title {
+  display: inline-block;
+  background: -webkit-gradient(
+    linear,
+    right top,
+    left top,
+    color-stop(30%, #3d405b),
+    to(#f2cc8f)
+  );
+  background: -o-linear-gradient(right, #3d405b 30%, #f2cc8f 100%);
+  background: linear-gradient(to left, #3d405b 30%, #f2cc8f 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* End */
 
 .page-header {
   display: -webkit-box;
@@ -175,15 +243,21 @@ button:focus,
   text-align: center;
 }
 
+.biography {
+  display: inline-block;
+  line-height: 35px;
+}
+
 /* start of grid */
 .project-list {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 1fr 20px 1fr 20px 1fr;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-gap: 20px;
-  margin: 80px;
+  grid-gap: 10px;
+  margin: auto;
   border: none;
+  color: var(--primary-color);
 }
 
 .project_item {
@@ -257,6 +331,16 @@ td {
     fill: #f76414;
   }
 }
+@-webkit-keyframes cloud-move {
+  from {
+    -webkit-transform: translate(0, 20px);
+    transform: translate(0, 20px);
+  }
+  to {
+    -webkit-transform: translate(100px, 20px);
+    transform: translate(100px, 20px);
+  }
+}
 @keyframes cloud-move {
   from {
     -webkit-transform: translate(0, 20px);
@@ -325,10 +409,6 @@ td {
     fill: green;
   } */
 
-.message-box {
-  fill: #3c9c8c;
-}
-
 .cloud-top,
 .cloud-bottom {
   transform-box: fill-box;
@@ -344,12 +424,6 @@ td {
 .cloud-bottom {
   animation: 2s cloud-move-reverse infinite alternate-reverse;
 }
-
-.screen {
-  -webkit-animation: 3s screen-color infinite alternate linear;
-  animation: 3s screen-color infinite alternate linear;
-}
-
 .sun {
   -webkit-animation: 5s sun-color infinite alternate linear;
   animation: 5s sun-color infinite alternate linear;
@@ -381,11 +455,11 @@ td {
 
 @media all and (max-width: 750px) {
   .project-list,
-  .about-item {
+  .about_item {
     gap: 10px;
   }
   .project_item:last-child,
-  .about-item:last-child {
+  .about_item:last-child {
     grid-column: auto / auto;
     grid-row: auto / auto;
   }
