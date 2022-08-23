@@ -1,0 +1,26 @@
+{
+  "name": "brayans_portfolio",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Mejiabrayan/Portfolio.git"
+  },
+  "keywords": [
+    "portfolio"
+  ],
+  "author": "Brayan Mejia Cuenca",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Mejiabrayan/Portfolio/issues"
+  },
+  "homepage": "https://github.com/Mejiabrayan/Portfolio#readme",
+  "dependencies": {
+    "bootstrap": "^5.2.0",
+    "jquery": "^3.6.0"
+  }
+}
