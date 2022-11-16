@@ -1,3 +1,10 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
 /* minimal color pallete */
 
 :root {
@@ -26,6 +33,7 @@ body {
   line-height: 1.6;
   text-rendering: auto;
   opacity: 0;
+  -o-transition: opacity 2s;
   transition: opacity 2s;
   -webkit-transition: opacity 2s; /* Safari */
 }
@@ -75,6 +83,8 @@ li {
   background-color: var(--primary-color);
   color: #fff;
   text-decoration: none;
+  -webkit-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
 }
 
@@ -87,6 +97,8 @@ button,
   background-color: var(--primary-color);
   color: #fff;
   text-decoration: none;
+  -webkit-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
 }
 
@@ -97,6 +109,8 @@ button:focus,
 .main-btn:hover {
   cursor: pointer;
   opacity: 0.8;
+  -webkit-transform: scale(1.05);
+  -ms-transform: scale(1.05);
   transform: scale(1.05);
 }
 
@@ -135,6 +149,8 @@ button:focus,
 /* section styling */
 
 .hero-content {
+  max-width: -webkit-max-content;
+  max-width: -moz-max-content;
   max-width: max-content;
   height: auto;
 }
@@ -164,6 +180,7 @@ button:focus,
 .work_title {
   display: inline-block;
   /* gradient color styling */
+  background: -o-linear-gradient(left, #3d405b 30%, #f2cc8f 100%);
   background: -webkit-gradient(
     linear,
     left top,
@@ -171,7 +188,6 @@ button:focus,
     color-stop(30%, #3d405b),
     to(#f2cc8f)
   );
-  background: -o-linear-gradient(left, #3d405b 30%, #f2cc8f 100%);
   background: linear-gradient(to right, #3d405b 30%, #f2cc8f 100%);
   -webkit-background-clip: text;
   background-clip: text;
@@ -181,6 +197,7 @@ button:focus,
 .about_title,
 .contact_title {
   display: inline-block;
+  background: -o-linear-gradient(right, #3d405b 30%, #f2cc8f 100%);
   background: -webkit-gradient(
     linear,
     right top,
@@ -188,7 +205,6 @@ button:focus,
     color-stop(30%, #3d405b),
     to(#f2cc8f)
   );
-  background: -o-linear-gradient(right, #3d405b 30%, #f2cc8f 100%);
   background: linear-gradient(to left, #3d405b 30%, #f2cc8f 100%);
   -webkit-background-clip: text;
   background-clip: text;
@@ -231,9 +247,17 @@ button:focus,
   margin: auto;
 }
 .projects {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-flow: row wrap;
   flex-flow: row wrap;
+  -ms-flex-line-pack: start;
   align-content: flex-start;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
   align-items: stretch;
   width: 100%;
   margin: auto;
@@ -242,8 +266,14 @@ button:focus,
 /* about edit */
 
 .main-section {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-flow: row nowrap;
   flex-flow: row nowrap;
+  -ms-flex-pack: distribute;
   justify-content: space-around;
   margin: auto;
 }
@@ -261,7 +291,16 @@ button:focus,
   font-size: 14px;
 }
 .content-left h2 {
+  background: -webkit-gradient(
+    linear,
+    left top,
+    right top,
+    color-stop(30%, #3d405b),
+    to(#f2cc8f)
+  );
+  background: -o-linear-gradient(left, #3d405b 30%, #f2cc8f 100%);
   background: linear-gradient(to right, #3d405b 30%, #f2cc8f 100%);
+  -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -273,6 +312,7 @@ button:focus,
 
 /* Project Grid */
 .projects-grid {
+  display: -ms-grid;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   grid-gap: 20px;
@@ -282,13 +322,25 @@ button:focus,
 }
 
 .project_items {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   background: #fff;
   border-radius: 10px;
+  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  -webkit-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
   cursor: pointer;
   overflow: hidden;
@@ -296,13 +348,22 @@ button:focus,
 }
 
 .project_items:hover {
+  -webkit-transform: translateY(-5px);
+  -ms-transform: translateY(-5px);
   transform: translateY(-5px);
+  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
 .contact-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-flow: column wrap;
   flex-flow: column wrap;
+  -ms-flex-pack: distribute;
   justify-content: space-around;
   margin: auto;
   margin-top: 50px;
@@ -310,6 +371,7 @@ button:focus,
 }
 
 .contact-grid {
+  display: -ms-grid;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   grid-gap: 20px;
@@ -323,13 +385,25 @@ button:focus,
 }
 
 .contact-items {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   background: #fff;
   border-radius: 10px;
+  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  -webkit-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
   cursor: pointer;
   overflow: hidden;
@@ -355,8 +429,14 @@ button:focus,
 /* style two column layout main-container using flexbox*/
 
 .main-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-flow: row wrap;
   flex-flow: row wrap;
+  -ms-flex-pack: distribute;
   justify-content: space-around;
   margin: 0 auto;
 }
@@ -531,7 +611,12 @@ button:focus,
 
 @media all and (max-width: 500px) {
   .main-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-flow: column wrap;
     flex-flow: column wrap;
     text-align: center;
   }
@@ -555,27 +640,44 @@ button:focus,
 
 @media all and (max-width: 500px) {
   nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-flow: column wrap;
     flex-flow: column wrap;
     text-align: center;
   }
- nav > ul {
+  nav > ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-flow: column wrap;
     flex-flow: column wrap;
     text-align: center;
   }
   nav > ul > li {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-flow: column wrap;
     flex-flow: column wrap;
     text-align: center;
   }
   nav > ul > li > a {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-flow: column wrap;
     flex-flow: column wrap;
     text-align: center;
     display: none;
   }
-
 }
-
-
