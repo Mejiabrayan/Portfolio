@@ -2,8 +2,9 @@
 
 :root {
   --primary-color: #3d405b;
-  --background-color: #f4f1de;
+  --background-color: #fff;
   --third-color: #f2cc8f;
+  --fourth-color: #00af80;
   --twitter-color: #1da1f2;
   --github-color: #c9510c;
   --linkedin-color: #c9510c;
@@ -19,7 +20,7 @@
 body {
   background-color: var(--background-color);
   color: var(--primary-color);
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Roboto Mono', monospace;
   font-weight: 400;
   font-size: var(--primary-font-size);
   line-height: 1.6;
@@ -30,19 +31,7 @@ h1 {
   font-size: 30px;
   font-weight: 700;
   display: inline-block;
-  /* gradient color styling */
-  background: -webkit-gradient(
-    linear,
-    left top,
-    right top,
-    color-stop(30%, #3d405b),
-    to(#f2cc8f)
-  );
-  background: -o-linear-gradient(left, #3d405b 30%, #f2cc8f 100%);
-  background: linear-gradient(to right, #3d405b 30%, #f2cc8f 100%);
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
+  margin: 0;
 }
 
 h2 {
@@ -116,6 +105,13 @@ button:focus,
   display: inline-block;
   margin-left: 15px;
   text-transform: uppercase;
+  text-decoration: none;
+}
+
+/* hover navigation-list li */
+
+.navigation-list li:hover {
+  text-decoration: none;
 }
 
 .logo_item {
@@ -127,19 +123,6 @@ button:focus,
   width: 250px;
   height: 100px;
   display: inline-block;
-  /* gradient color styling */
-  background: -webkit-gradient(
-    linear,
-    left top,
-    right top,
-    from(#3d405b),
-    to(#f2cc8f)
-  );
-  background: -o-linear-gradient(left, #3d405b 0%, #f2cc8f 100%);
-  background: linear-gradient(to right, #3d405b 0%, #f2cc8f 100%);
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
 }
 .logo_item a {
   text-decoration: none;
@@ -147,14 +130,6 @@ button:focus,
 /* End */
 
 /* section styling */
-
-.profile {
-  max-width: 700px;
-  min-width: 360px;
-  margin: 0 auto;
-  height: auto;
-  overflow: hidden;
-}
 
 .hero-content {
   max-width: max-content;
@@ -243,7 +218,6 @@ button:focus,
   flex-grow: 1;
   text-align: right;
 }
-
 
 .social-media > * {
   cursor: pointer;
@@ -341,6 +315,10 @@ button:focus,
   max-width: 1200px;
 }
 
+.contact-container h1 {
+  text-align: center;
+}
+
 .contact-items {
   display: flex;
   flex-direction: column;
@@ -364,7 +342,7 @@ button:focus,
   left: 0;
   bottom: 0;
   width: 100%;
-  background-color: #3d405b;
+  background-color: var(--fourth-color);
   color: white;
   text-align: center;
 }
@@ -394,16 +372,12 @@ button:focus,
 }
 
 .main-container_item--right {
-  width: 60%;
-}
-
-.main-container_item--left img {
-  width: 100%;
-  height: auto;
+  width: 50%;
+  float: right;
 }
 
 .main-container_item--right img {
-  width: 100%;
+  width: 50%;
   height: auto;
 }
 
@@ -550,30 +524,55 @@ button:focus,
 
 /* our profile & about section */
 
-@media all and (min-width: 390px) and (max-width: 844px) {
-  .profile,
-  .profile_portrait {
-    display: -ms-flexbox;
-    display: flex;
-    flex-flow: column wrap;
-    align-items: center;
-    padding: 20px;
-  }
-  .main-section {
+/* make main-container responsive using media queries */
+
+@media all and (max-width: 500px) {
+  .main-container {
     display: flex;
     flex-flow: column wrap;
     text-align: center;
   }
-
-  .content-left {
-    width: auto;
-    padding: 5px;
+  .main-container_item {
+    width: 100%;
+    padding: 10px;
   }
-
-  .profile_portrait {
-    display: none;
+  .main-container_item--left {
+    width: 100%;
   }
-  h1 {
-    font-size: 45px;
+  .main-container_item--right {
+    width: 100%;
+  }
+  .main-container_item--right img {
+    width: 100%;
+    height: auto;
   }
 }
+
+/* make nav responsive using media queries */
+
+@media all and (max-width: 500px) {
+  nav {
+    display: flex;
+    flex-flow: column wrap;
+    text-align: center;
+  }
+ nav > ul {
+    display: flex;
+    flex-flow: column wrap;
+    text-align: center;
+  }
+  nav > ul > li {
+    display: flex;
+    flex-flow: column wrap;
+    text-align: center;
+  }
+  nav > ul > li > a {
+    display: flex;
+    flex-flow: column wrap;
+    text-align: center;
+    display: none;
+  }
+
+}
+
+
