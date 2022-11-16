@@ -17,12 +17,15 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500;600&display=swap" rel="stylesheet"> 
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="css/style.production.css" />
   </head>
-  <body>
+  <body onload="document.body.style.opacity='1'">
     <!-- Header -->
     <header class="page-header">
       <h1 class="page-header_item logo_item">
@@ -41,20 +44,26 @@
             >
           </li>
           <li role="presentation">
-            <a href="#main-sec" role="menuitem" class="navigation-list_item"
+            <a
+              href="#main-container"
+              role="menuitem"
+              class="navigation-list_item"
               >About</a
             >
           </li>
           <li role="presentation">
             <a
-              href="#portfolio-grid"
+              href="#portfolio-container"
               role="menuitem"
               class="navigation-list_item"
               >Portfolio</a
             >
           </li>
           <li role="presentation">
-            <a href="contact.html" role="menuitem" class="navigation-list_item"
+            <a
+              href="#contact-container"
+              role="menuitem"
+              class="navigation-list_item"
               >Contact</a
             >
           </li>
@@ -64,17 +73,18 @@
 
     <!-- Two column flexbox layout  -->
 
-    <main class="main-container">
+    <main class="main-container" id="main-container">
       <section class="main-container_item main-container_item--left">
-        <h2 class="main-container_item--left_title">
+        <h2 class="main-container_item--left_title" id="heading">
           Hi, I'm Brayan, a Full-Stack Developer
         </h2>
         <p class="main-container_item--left_text">
-         I'm  a Full-Stack Developer based in the Bay Area with a passion for creating beautiful and functional websites.
+          I'm a Full-Stack Developer based in the Bay Area with a passion for
+          creating beautiful and functional websites.
         </p>
         <a href="#contact.html" class="main-container_item--left_button"
-          >Let's Connect </a
-        >
+          >Let's Connect
+        </a>
       </section>
       <section class="main-container_item main-container_item--right">
         <img
@@ -83,11 +93,7 @@
           class="main-container_item--right_image profile_potrait"
         />
       </section>
-
-
     </main>
-
-    
 
     <!-- About Section
     <div class="main-section" id="main-sec">
@@ -105,7 +111,7 @@
         </p>
         <a href="#" class="main-btn" target="_blank" download>Download my CV</a>
       </div> -->
-<!-- 
+    <!-- 
       <div class="content-right">
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -618,12 +624,13 @@ c20 -17 27 -33 27 -57 0 -24 -7 -40 -27 -57 -34 -28 -65 -29 -100 -2 -37 29
       <h1>Portfolio</h1>
       <div class="projects-grid">
         <div class="project_items">
-          <h2> MeetUp PWA </h2>
+          <h2>MeetUp PWA</h2>
           <p>
-            Build a serverless React PWA (for online and offline use).
-            Follow a BDD & TDD methodology (scenarios & stories, red-green-refactor, quick feedback).
-            Fetch event data from Google Calendar API.
-            Data visualisation (number of upcoming events, & popularity of event genres)
+            Build a serverless React PWA (for online and offline use). Follow a
+            BDD & TDD methodology (scenarios & stories, red-green-refactor,
+            quick feedback). Fetch event data from Google Calendar API. Data
+            visualisation (number of upcoming events, & popularity of event
+            genres)
           </p>
           <a href="https://github.com/Mejiabrayan/MeetUp-App" target="_blank"
             >See Source Code on Github</a
@@ -633,10 +640,15 @@ c20 -17 27 -33 27 -57 0 -24 -7 -40 -27 -57 -34 -28 -65 -29 -100 -2 -37 29
         <div class="project_items">
           <h2>MyMovies</h2>
           <p>
-            This is a client-side of a movie database App called myMovies which fetches data from its server-side (MyMovies-API).
-             It allows users to search for and save information about different movies, directors, and genres. Users will also be able to register, update their personal information, and create a list of their favorite movies.
+            This is a client-side of a movie database App called myMovies which
+            fetches data from its server-side (MyMovies-API). It allows users to
+            search for and save information about different movies, directors,
+            and genres. Users will also be able to register, update their
+            personal information, and create a list of their favorite movies.
           </p>
-          <a href="https://github.com/Mejiabrayan/myMovie-client" target="_blank"
+          <a
+            href="https://github.com/Mejiabrayan/myMovie-client"
+            target="_blank"
             >See Source Code on Github</a
           >
         </div>
@@ -644,7 +656,10 @@ c20 -17 27 -33 27 -57 0 -24 -7 -40 -27 -57 -34 -28 -65 -29 -100 -2 -37 29
         <div class="project_items">
           <h2>Pokedex App</h2>
           <p>
-            Pokedex is a mobile-friendly web app built with HTML, CSS, and JavaScript that loads data from an Pokedex external API and enables the viewing of Pokemon characteristics, there height, weight, and abililties, etc.
+            Pokedex is a mobile-friendly web app built with HTML, CSS, and
+            JavaScript that loads data from an Pokedex external API and enables
+            the viewing of Pokemon characteristics, there height, weight, and
+            abililties, etc.
           </p>
           <a href="https://github.com/Mejiabrayan/Gemini-Photos" target="_blank"
             >See Source Code on Github</a
@@ -652,7 +667,7 @@ c20 -17 27 -33 27 -57 0 -24 -7 -40 -27 -57 -34 -28 -65 -29 -100 -2 -37 29
         </div>
       </div>
     </div>
-<!-- build two column contact -->
+    <!-- build two column contact -->
 
     <div class="contact-container" id="contact-container">
       <h1>Contact</h1>
@@ -660,34 +675,45 @@ c20 -17 27 -33 27 -57 0 -24 -7 -40 -27 -57 -34 -28 -65 -29 -100 -2 -37 29
         <div class="contact-items">
           <h2>Get in touch</h2>
           <p>
-            I'm currently looking for a new role as a Frontend Developer. If you have a position that you think I'd be a good fit for, please get in touch.
+            I'm currently looking for a new role as a Frontend Developer. If you
+            have a position that you think I'd be a good fit for, please get in
+            touch.
           </p>
-          <a href="mailto:
+          <a
+            href="mailto:
 
-">Email me</a>
+"
+            >Email me</a
+          >
 
-          <a href="https://www.linkedin.com/in/brayan-mejia-0a1b3b1b3/" target="_blank"
+          <a
+            href="https://www.linkedin.com/in/brayan-mejia-0a1b3b1b3/"
+            target="_blank"
             >LinkedIn</a
           >
         </div>
 
         <div class="contact-items">
           <h2>My CV</h2>
-          <p>
-            You can download my CV here.
-          </p>
-          <a href="
+          <p>You can download my CV here.</p>
+          <a
+            href="
 
 
-" target="_blank">Download CV</a>
+"
+            target="_blank"
+            >Download CV</a
+          >
 
-          <a href="
+          <a
+            href="
 
-" target="_blank">Download Cover Letter</a>
-
+"
+            target="_blank"
+            >Download Cover Letter</a
+          >
         </div>
       </div>
-
     </div>
 
     <!-- Footer -->
@@ -701,15 +727,14 @@ c20 -17 27 -33 27 -57 0 -24 -7 -40 -27 -57 -34 -28 -65 -29 -100 -2 -37 29
             alt="Github-icon"
           />
         </a>
-      <a href="https://www.linkedin.com/in/mejiabrayan" target="_blank">
-        <img
-          class="footer-item-linkedin"
-          src="img/linkedIn.svg"
-          alt="LinkedIn-icon"
-        />
-      </a>
+        <a href="https://www.linkedin.com/in/mejiabrayan" target="_blank">
+          <img
+            class="footer-item-linkedin"
+            src="img/linkedIn.svg"
+            alt="LinkedIn-icon"
+          />
+        </a>
       </div>
     </footer>
-
   </body>
 </html>
