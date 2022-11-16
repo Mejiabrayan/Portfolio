@@ -25,6 +25,9 @@ body {
   font-size: var(--primary-font-size);
   line-height: 1.6;
   text-rendering: auto;
+  opacity: 0;
+  transition: opacity 2s;
+  -webkit-transition: opacity 2s; /* Safari */
 }
 
 h1 {
