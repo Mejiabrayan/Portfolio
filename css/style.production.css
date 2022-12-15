@@ -461,8 +461,6 @@ li {
   padding: 0;
   margin-left: -12em;
   transform: scale(1.2);
-
-
 }
 /* 
 .clip-element {
@@ -492,6 +490,14 @@ li {
   font-size: 16px;
   cursor: pointer;
   text-decoration: none;
+}
+
+.main-container_item--left_button:hover, .featured-container_item--right_button:hover {
+  background-color: #33d2a8;
+  -webkit-transform: translateY(-5px);
+  -ms-transform: translateY(-5px);
+  transform: translateY(-5px);
+
 }
 
 .project-btn {
