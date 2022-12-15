@@ -17,6 +17,7 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -29,11 +30,10 @@
     <!-- Header -->
     <header class="page-header">
       <h1 class="page-header_item logo_item">
-        <a href="index.html" role="logo"> &#60;Brayan&#62;</a>
+        <a href="index.html" role="logo"> &#60;Brayan&#47;&#62;</a>
       </h1>
 
       <nav class="main-navigation page-header_item">
-        <!-- Our last child -->
         <ul role="menubar" class="navigation-list">
           <li role="presentation">
             <a
@@ -67,18 +67,16 @@
               >Contact</a
             >
           </li>
-      
-          
         </ul>
       </nav>
     </header>
-
-    <!-- Two column flexbox layout  -->
-
+    
+    <!-- Main -->
+    
     <main class="main-container" id="main-container">
       <section class="main-container_item main-container_item--left">
         <h2 class="main-container_item--left_title" id="heading">
-          Hi, my name is Brayan,
+          Hi, my name is <span class="name-highlight">Brayan</span>,
         </h2>
 
           <p class="main-container_item--left_text">
@@ -98,10 +96,37 @@
         />
       </section>
     </main>
-    
+
+
+    <div class="featured-container" id="featured-container">
+      <section class="featured-container_item featured-container_item--left">
+        <img
+          src="./img/project-img/chat-app.png"
+          alt="Featured app image"
+          class="featured-container_item--left_image"
+        />
+      </section>
+
+      <section class="featured-container_item featured-container_item--right">
+        <h2 class="featured-container_item--left_title" id="heading"> Chatty App </h2>
+        
+        <p class="featured-container_item--left_text ">
+          A chat app for mobile devices built with React-Native. 
+          It provides users with a chat interface where they can send/receive text messages and images as well as share their location.
+        </p>
+        
+        <a href="https://www.linkedin.com/in/mejiabrayan" class="main-container_item--left_button"
+        >See source code
+      </a>
+    </section>
+    </div>
+
+
+    <!-- Portfolio -->
 
     <div class="portfolio-container" id="portfolio-container">
-      <h1>Projects</h1>
+      <div class="clip-element"></div>
+      <h1>Projects</h1> <i class="fa-solid fa-briefcase"></i>
       <div class="projects-grid">
         <div class="project_items">
           <h2>MeetUp PWA</h2>
@@ -142,14 +167,31 @@
             the viewing of Pokemon characteristics, there height, weight, and
             abililties, etc.
           </p>
+          <div class="project-image" id="pokedex-image">
+            <img
+              src="./img/project-img/pokedex.png"
+              alt="Pokedex app image"
+              class="project-image"
+            />
+          </div>
           <a href="https://github.com/Mejiabrayan/Gemini-Photos" target="_blank"
+          class="project_items--link"
+            ><button class="project-btn">See Source Code</button></a
+          >
+        </div>
+        <div class="project_items">
+          <h2>Chatty App</h2>
+          <p>
+            A chat app for mobile devices built with React-Native. 
+            It provides users with a chat interface where they can send/receive text messages and images as well as share their location.
+          </p>
+          <a href="https://github.com/Mejiabrayan/Chatty-app" target="_blank"
           class="project_items--link"
             ><button class="project-btn">See Source Code</button></a
           >
         </div>
       </div>
     </div>
-    <!-- build two column contact -->
 
     <div class="contact-container" id="contact-container">
       <h1>Contact</h1>
@@ -197,7 +239,8 @@
         </div>
       </div>
     </div>
-
+    
+    <div id="like_button"></div>
     <!-- Footer -->
     <footer class="footer">
       <p>Find me on</p>
@@ -218,5 +261,15 @@
         </a>
       </div>
     </footer>
+    
+    <!-- Load React. -->
+    <!-- Note: when deploying, replace "development.js" with "production.min.js". -->
+    <script src="components/like_button.js."></script>
+    
+    <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+
+    <!-- Load our React component. -->
   </body>
 </html>
