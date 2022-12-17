@@ -8,7 +8,7 @@
   --primary-color: #3d405b;
   --background-color: #fff;
   --third-color: #f2cc8f;
-  --fourth-color: #00af80;
+  --fourth-color: #00ED64;
   --twitter-color: #1da1f2;
   --github-color: #c9510c;
   --linkedin-color: #c9510c;
@@ -429,6 +429,9 @@ li {
   padding: 10px;
 
 }
+/* .main-container_item--left_text, .featured-container_item--right_text {
+  padding: 5px;
+} */
 
 /* End */
 
@@ -462,29 +465,17 @@ li {
   margin-left: -12em;
   transform: scale(1.2);
 }
-/* 
-.clip-element {
-  width: 100%;
-  height: 100%;
-  position: absolute;
 
-  top: 0;
-  left: 0;
-
-  z-index: -1;
-  background-color: var(--fourth-color);
-  clip-path: circle(50% at 50% 50%);
-  transform: translate(50%, 50%); 
-  opacity: 0.5; 
-  } */
 
 
 .main-container_item--left_button, .featured-container_item--right_button {
   width: 100%;
   height: 100%;
   background-color: var(--fourth-color);
-  color: white;
-  border: none;
+  color: var(--primary-color);
+  /* font-weight: bold; */
+  border: solid;
+  border-width: 1px;
   border-radius: 5px;
   padding: 10px;
   font-size: 16px;
@@ -493,7 +484,7 @@ li {
 }
 
 .main-container_item--left_button:hover, .featured-container_item--right_button:hover {
-  background-color: #33d2a8;
+  background-color: #00d459;
   -webkit-transform: translateY(-5px);
   -ms-transform: translateY(-5px);
   transform: translateY(-5px);
