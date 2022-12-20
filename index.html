@@ -5,11 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Brayan's Portfolio</title>
-    <link
-      rel="shortcut icon"
-      href="img/favicon.ico"
-      type="image/x-icon"
-    />
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
@@ -17,7 +13,13 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+      integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -44,10 +46,7 @@
             >
           </li>
           <li role="presentation">
-            <a
-            href="about.html"
-              role="menuitem"
-              class="navigation-list_item"
+            <a href="about.html" role="menuitem" class="navigation-list_item"
               >About</a
             >
           </li>
@@ -70,24 +69,28 @@
         </ul>
       </nav>
     </header>
-    
+
     <!-- Main -->
-    
+
     <main class="main-container" id="main-container">
       <section class="main-container_item main-container_item--left">
         <h2 class="main-container_item--left_title" id="heading">
           Hi, my name is <span class="name-highlight">Brayan</span>,
         </h2>
 
-          <p class="main-container_item--left_text" alt="introduction about the author">
-            I'm a Full-Stack Developer based in the Bay Area with a passion for building Progressive Web Applications.
-            Coding is my superpower and I love to use it create solutions to real world problems.
-          </p>
-          
-        <a 
-        href="https://www.linkedin.com/in/mejiabrayan" 
-        class="main-container_item--left_button"
-        alt="Link to LinkedIn profile"
+        <p
+          class="main-container_item--left_text"
+          alt="introduction about the author"
+        >
+          I'm a Full-Stack Developer based in the Bay Area with a passion for
+          building Progressive Web Applications. Coding is my superpower and I
+          love to use it create solutions to real world problems.
+        </p>
+
+        <a
+          href="https://www.linkedin.com/in/mejiabrayan"
+          class="main-container_item--left_button"
+          alt="Link to LinkedIn profile"
           >Let's Connect
         </a>
       </section>
@@ -97,98 +100,95 @@
           alt="Hero image of character sitting using laptop"
           class="main-container_item--right_image profile_potrait"
         />
-        
       </section>
-    
     </main>
+    <div>
+      <!-- <h1>Featured</h1> -->
+      <div class="featured-container" id="featured-container">
+        <section class="featured-container_item featured-container_item--left">
+          <img
+            src="./img/project-img/chat-app.png"
+            alt="Featured app image"
+            class="featured-container_item--left_image"
+          />
+        </section>
 
-    <div class="featured-container" id="featured-container">
-      <section class="featured-container_item featured-container_item--left">
-        <img
-          src="./img/project-img/chat-app.png"
-          alt="Featured app image"
-          class="featured-container_item--left_image"
-        />
-      </section>
+        <section class="featured-container_item featured-container_item--right">
+          <h2 class="featured-container_item--left_title" id="heading">
+            Chatty App,
+          </h2>
 
-      <section class="featured-container_item featured-container_item--right">
-        <h2 class="featured-container_item--left_title" id="heading"> Chatty App, </h2>
-        
-        <p class="featured-container_item--left_text ">
-          I recently developed a chat app for mobile devices using React-Native. One of the standout features of the app is the ability to share your location with other users in real-time. I thoroughly enjoyed the process of building this app and I am eager to continue improving and expanding its capabilities.
-        </p>
-        
-        <a href="https://github.com/Mejiabrayan/Chatty-app" class="main-container_item--left_button"
-        >More details
-      </a>
-    </section>
+          <p class="featured-container_item--left_text">
+            I recently developed a chat app for mobile devices using
+            React-Native. One of the standout features of the app is the ability
+            to share your location with other users in real-time. I thoroughly
+            enjoyed the process of building this app and I am eager to continue
+            improving and expanding its capabilities.
+          </p>
+
+          <a
+            href="https://github.com/Mejiabrayan/Chatty-app"
+            class="main-container_item--left_button"
+            >More details
+          </a>
+        </section>
+      </div>
     </div>
 
     <!-- Portfolio -->
 
     <div class="portfolio-container" id="portfolio-container">
       <div class="clip-element"></div>
-      <h1>Projects</h1> <i class="fa-solid fa-briefcase"></i>
+      <h1>Projects <i class="fa-solid fa-code"></i></h1>
       <div class="projects-grid">
         <div class="project_items">
-          <h2>MeetUp PWA</h2>
+          <h2>MeetUp App <i class="fa-solid fa-location-dot"></i></h2>
           <p>
-            Build a serverless React PWA (for online and offline use). Follow a
-            BDD & TDD methodology (scenarios & stories, red-green-refactor,
-            quick feedback). Fetch event data from Google Calendar API. Data
-            visualisation (number of upcoming events, & popularity of event
-            genres)
+          A serverless React Web App using React, following a
+            BDD and TDD approach. The PWA is designed for online and offline
+            use.
           </p>
           <a href="https://github.com/Mejiabrayan/MeetUp-App" target="_blank"
-          class="project_items--link"
             ><button class="project-btn">See Source Code</button></a
           >
+        
         </div>
 
         <div class="project_items">
-          <h2>MyMovies</h2>
+          <h2>MyMovies <i class="fa-solid fa-film"></i></h2>
           <p>
             This is a client-side of a movie database App called myMovies which
-            fetches data from its server-side (MyMovies-API). It allows users to
-            search for and save information about different movies, directors,
-            and genres.
+            fetches data from its server-side (MyMovies-API).
           </p>
           <a
             href="https://github.com/Mejiabrayan/myMovie-client"
             target="_blank"
-            class="project_items--link"
             ><button class="project-btn">See Source Code</button></a
           >
         </div>
 
         <div class="project_items">
-          <h2>Pokedex App</h2>
+          <h2>Pokedex App <i class="fa-solid fa-gamepad"></i></h2>
           <p>
-            Pokedex is a mobile-friendly web app built with HTML, CSS, and
-            JavaScript that loads data from an Pokedex external API and enables
-            the viewing of Pokemon characteristics, there height, weight, and
-            abililties, etc.
+            Pokedex is a web app that displays Pokemon information using HTML,
+            CSS, and JavaScript, and retrieves data from an external API.
           </p>
-          <div class="project-image" id="pokedex-image">
-            <img
-
-              alt="Pokedex app image"
-              class="project-image"
-            />
-          </div>
+          <div class="project-image" id="pokedex-image"></div>
           <a href="https://github.com/Mejiabrayan/Gemini-Photos" target="_blank"
-          class="project_items--link"
             ><button class="project-btn">See Source Code</button></a
           >
         </div>
         <div class="project_items">
-          <h2>Chatty App</h2>
+          <h2>Chatty App <i class="fa-solid fa-message"></i></h2>
           <p>
-            A chat app for mobile devices built with React-Native. 
-            It provides users with a chat interface where they can send/receive text messages and images as well as share their location.
+            A chat app for mobile devices built with React-Native. It provides
+            users with a chat interface where they can send/receive text
+            messages and images as well as share their location.
           </p>
-          <a href="https://github.com/Mejiabrayan/Chatty-app" target="_blank"
-          class="project_items--link"
+          <a
+            href="https://github.com/Mejiabrayan/Chatty-app"
+            target="_blank"
+            class="project_items--link"
             ><button class="project-btn">See Source Code</button></a
           >
         </div>
@@ -196,35 +196,30 @@
     </div>
 
     <div class="contact-container" id="contact-container">
-      <h1>Contact</h1>
+      <h1>Contact <i class="fa-solid fa-address-card"></i></h1>
       <div class="contact-grid">
         <div class="contact-items">
           <h2>Get in touch</h2>
           <p>
-            I'm currently looking for new opportunities, my inbox is always open.
+            I'm currently looking for new opportunities, my inbox is always
+            open.
           </p>
-          <a  href="mailto:mejiabrayan@protonmail.com">
-            <img
-            class="footer-item-linkedin"
-            src="img/envelope-regular.svg"
-            alt="Email-icon"
-          />
-        </a>
+          <a href="mailto:mejiabrayan@protonmail.com">
+            <i 
+            class="fa-solid fa-envelope"
+
+            ></i>
+          </a>
 
           <a href="https://www.linkedin.com/in/brayan-mejia" target="_blank">
-            <img
-              class="footer-item-linkedin"
-              src="img/linkedIn.svg"
-              alt="LinkedIn-icon"
-            />
+            <i class="fa-brands fa-linkedin"></i>
           </a>
         </div>
 
         <div class="contact-items">
           <h2>My Resume</h2>
           <p>You can download my Resume here.</p>
-          <a href="" target="_blank"
-          alt="Link to download Resume in PDF format"
+          <a href="" target="_blank" alt="Link to download Resume in PDF format"
             ><button class="project-btn">Download</button></a
           >
         </div>

@@ -211,9 +211,6 @@ li {
 .logo_item a {
   text-decoration: none;
 }
-/* End */
-
-/* section styling */
 
 .hero-content {
   max-width: -webkit-max-content;
@@ -226,59 +223,8 @@ li {
   text-decoration: none;
 }
 
-/* round profile_potrait styling */
 
-.profile_portrait {
-  float: left;
-  width: 250px;
-  height: 250px;
-  background-image: url(/img/profile-picture.jpg);
-  background-size: cover;
-  background-position: 65%;
-  display: block;
-  margin-right: 40px;
-  margin-top: 25px;
-  border-radius: 50%;
-}
 
-/* Title styling */
-
-.profile_title,
-.work_title {
-  display: inline-block;
-  /* gradient color styling */
-  background: -o-linear-gradient(left, #3d405b 30%, #f2cc8f 100%);
-  background: -webkit-gradient(
-    linear,
-    left top,
-    right top,
-    color-stop(30%, #3d405b),
-    to(#f2cc8f)
-  );
-  background: linear-gradient(to right, #3d405b 30%, #f2cc8f 100%);
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-.about_title,
-.contact_title {
-  display: inline-block;
-  background: -o-linear-gradient(right, #3d405b 30%, #f2cc8f 100%);
-  background: -webkit-gradient(
-    linear,
-    right top,
-    left top,
-    color-stop(30%, #3d405b),
-    to(#f2cc8f)
-  );
-  background: linear-gradient(to left, #3d405b 30%, #f2cc8f 100%);
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-/* End */
 
 .page-header {
   display: -webkit-box;
