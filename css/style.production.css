@@ -8,7 +8,7 @@
   --primary-color: #3d405b;
   --background-color: #fff;
   --third-color: #f2cc8f;
-  --fourth-color: #00ED64;
+  --fourth-color: #00ed64;
   --twitter-color: #1da1f2;
   --github-color: #c9510c;
   --linkedin-color: #c9510c;
@@ -35,15 +35,11 @@ body {
   -webkit-transition: opacity 2s; /* Safari */
 }
 
-
-
-
 h1 {
   font-size: 30px;
   font-weight: 700;
   display: inline-block;
   margin: 0;
-  
 }
 
 h2 {
@@ -90,6 +86,10 @@ li {
 }
 
 .navigation-list_item--active {
+  text-decoration: underline;
+}
+
+.navigation-list_item {
   text-decoration: none;
 }
 
@@ -198,16 +198,6 @@ li {
 
 /* media query for tablet */
 
-
-
-
-
-/* hover navigation-list li */
-
-.navigation-list li:hover {
-  text-decoration: none;
-}
-
 .logo_item {
   margin: 0 auto;
   position: relative;
@@ -217,7 +207,6 @@ li {
   width: 250px;
   height: 100px;
   display: inline-block;
-  
 }
 .logo_item a {
   text-decoration: none;
@@ -341,8 +330,6 @@ li {
   margin: auto;
 }
 
-
-
 /* about edit */
 
 .main-section {
@@ -399,7 +386,6 @@ li {
   margin: 0 auto;
   width: 100%;
   max-width: 1200px;
-  
 }
 
 .project_items {
@@ -481,6 +467,7 @@ li {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  text-align: center;
   background: #fff;
   border-radius: 10px;
   -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -510,7 +497,8 @@ li {
 
 /* End */
 
-.main-container, .featured-container{
+.main-container,
+.featured-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -524,10 +512,10 @@ li {
 }
 /* style main-container_item */
 
-.main-container_item,.featured-container_item {
+.main-container_item,
+.featured-container_item {
   width: 50%;
   padding: 10px;
-
 }
 /* .main-container_item--left_text, .featured-container_item--right_text {
   padding: 5px;
@@ -543,10 +531,7 @@ li {
 .featured-container_item--right {
   width: 40%;
   float: right;
-  text-align: center;
 }
-
-
 
 .main-container_item--right {
   width: 50%;
@@ -555,7 +540,6 @@ li {
 .main-container_item--right img {
   width: 50%;
   height: auto;
-
 }
 
 .featured-container_item--left img {
@@ -566,9 +550,9 @@ li {
   transform: scale(1.2);
 }
 
-
-
-.main-container_item--left_button, .featured-container_item--right_button, .project-btn  {
+.main-container_item--left_button,
+.featured-container_item--right_button,
+.project-btn {
   width: 100%;
   height: 100%;
   background-color: var(--fourth-color);
@@ -578,20 +562,23 @@ li {
   border-width: 1px;
   border-radius: 5px;
   padding: 10px;
+  margin: 10px;
   font-size: 16px;
   cursor: pointer;
   text-decoration: none;
+  -webkit-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 
-.main-container_item--left_button:hover, .featured-container_item--right_button:hover, .project-btn:hover {
+.main-container_item--left_button:hover,
+.featured-container_item--right_button:hover,
+.project-btn:hover {
   background-color: #00d459;
   -webkit-transform: translateY(-5px);
   -ms-transform: translateY(-5px);
   transform: translateY(-5px);
-
 }
-
-
 
 .about-container {
   display: -webkit-box;
@@ -644,7 +631,6 @@ li {
   text-decoration: none;
 }
 
-
 /* Media Queries */
 
 /* our project list  */
@@ -682,20 +668,23 @@ li {
     text-align: center;
   }
   .main-container_item,
-  .about-container_item, .featured-container_item{
+  .about-container_item,
+  .featured-container_item {
     width: 100%;
     padding: 10px;
   }
   .main-container_item--left,
-  .about-container_item--left, .featured-container_item--left {
+  .about-container_item--left,
+  .featured-container_item--left {
     width: 100%;
   }
   .main-container_item--right,
-  .about-container_item--right, .featured-container_item--right {
+  .about-container_item--right,
+  .featured-container_item--right {
     width: 100%;
   }
   .main-container_item--right img,
-  .about-container_item--right img  {
+  .about-container_item--right img {
     width: 100%;
     height: auto;
   }
@@ -708,11 +697,6 @@ li {
     transform: scale(1.2);
   }
 }
-
-
-
-
-
 
 /* make nav responsive using media queries */
 
