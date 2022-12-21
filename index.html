@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Brayan's Portfolio</title>
-    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
+    <link rel="shortcut icon" href="/public/favicon.ico" type="image/x-icon" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
@@ -32,7 +32,7 @@
     <!-- Header -->
     <header class="page-header">
       <h1 class="page-header_item logo_item">
-        <a href="index.html" role="logo"> &#60;Brayan&#47;&#62;</a>
+        <a href="index.html" role="logo"> &#60;BMC&#47;&#62;</a>
       </h1>
 
       <nav class="main-navigation page-header_item">
@@ -74,9 +74,11 @@
 
     <main class="main-container" id="main-container">
       <section class="main-container_item main-container_item--left">
-        <h2 class="main-container_item--left_title" id="heading">
-          Hi, my name is <span class="name-highlight">Brayan</span>,
-        </h2>
+        <header>
+          <h1 class="main-container_item--left_title" id="heading">
+            Hi, my name is <span class="name-highlight">Brayan</span>,
+          </h1>
+        </header>
 
         <p
           class="main-container_item--left_text"
@@ -92,7 +94,9 @@
           class="main-container_item--left_button"
           alt="Link to LinkedIn profile"
           >Let's Connect
+ 
         </a>
+        
       </section>
       <section class="main-container_item main-container_item--right">
         <img
@@ -114,72 +118,47 @@
         </section>
 
         <section class="featured-container_item featured-container_item--right">
-          <h2 class="featured-container_item--left_title" id="heading">
-            Chatty App,
-          </h2>
+          <header class="featured-heading">
+            <h2 class="featured-container_item--left_title" id="heading">
+              Chatty App,
+            </h2>
+          </header>
 
           <p class="featured-container_item--left_text">
             I recently developed a chat app for mobile devices using
             React-Native. One of the standout features of the app is the ability
             to share your location with other users in real-time. I thoroughly
             enjoyed the process of building this app and I am eager to continue
-            improving and expanding its capabilities.
+            improving and expanding its capabilities. I also created a case
+            study for this project which you can read by clicking the button
+            below.
           </p>
 
           <a
-            href="https://github.com/Mejiabrayan/Chatty-app"
+            href="https://raw.githubusercontent.com/Mejiabrayan/chatty-app-case-study/main/Minimal%20Company%20Case%20Study.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
             class="main-container_item--left_button"
-            >More details
+            >Read Case Study
+            <i class="fa-solid fa-arrow-right"></i>
           </a>
+          
+          
         </section>
       </div>
     </div>
 
-    <!-- Portfolio -->
+    <!-- Projects -->
 
     <div class="portfolio-container" id="portfolio-container">
-      <div class="clip-element"></div>
-      <h1>Projects <i class="fa-solid fa-code"></i></h1>
+      <header>
+        <h1>Projects <i class="fa-solid fa-code"></i></h1>
+      </header>
       <div class="projects-grid">
         <div class="project_items">
-          <h2>MeetUp App <i class="fa-solid fa-location-dot"></i></h2>
-          <p>
-          A serverless React Web App using React, following a
-            BDD and TDD approach. The PWA is designed for online and offline
-            use.
-          </p>
-          <a href="https://github.com/Mejiabrayan/MeetUp-App" target="_blank"
-            ><button class="project-btn">See Source Code</button></a
-          >
-        
-        </div>
-
-        <div class="project_items">
-          <h2>MyMovies <i class="fa-solid fa-film"></i></h2>
-          <p>
-            This is a client-side of a movie database App called myMovies which
-            fetches data from its server-side (MyMovies-API).
-          </p>
-          <a
-            href="https://github.com/Mejiabrayan/myMovie-client"
-            target="_blank"
-            ><button class="project-btn">See Source Code</button></a
-          >
-        </div>
-
-        <div class="project_items">
-          <h2>Pokedex App <i class="fa-solid fa-gamepad"></i></h2>
-          <p>
-            Pokedex is a web app that displays Pokemon information using HTML,
-            CSS, and JavaScript, and retrieves data from an external API.
-          </p>
-          <div class="project-image" id="pokedex-image"></div>
-          <a href="https://github.com/Mejiabrayan/Gemini-Photos" target="_blank"
-            ><button class="project-btn">See Source Code</button></a
-          >
-        </div>
-        <div class="project_items">
-          <h2>Chatty App <i class="fa-solid fa-message"></i></h2>
+          <header>
+            <h2>Chatty App <i class="fa-solid fa-message"></i></h2>
+          </header>
           <p>
             A chat app for mobile devices built with React-Native. It provides
             users with a chat interface where they can send/receive text
@@ -188,8 +167,73 @@
           <a
             href="https://github.com/Mejiabrayan/Chatty-app"
             target="_blank"
+            rel="noopener noreferrer"
             class="project_items--link"
-            ><button class="project-btn">See Source Code</button></a
+            ><button class="project_button">See Source Code</button></a
+          >
+
+          <a
+            href="https://raw.githubusercontent.com/Mejiabrayan/chatty-app-case-study/main/Minimal%20Company%20Case%20Study.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="project_items--link"
+            ><button class="project_button">Case Study</button></a
+          >
+        </div>
+        <div class="project_items">
+          <header>
+            <h2>MyMovies <i class="fa-solid fa-film"></i></h2>
+          </header>
+          <p>
+            This is a client-side of a movie database App called myMovies which
+            fetches data from its server-side (MyMovies-API).
+          </p>
+          <a
+            href="https://github.com/Mejiabrayan/myMovie-client"
+            target="_blank"
+            rel="noopener noreferrer"
+            ><button class="project_button">See Source Code</button></a
+          >
+          <a
+            href="https://raw.githubusercontent.com/Mejiabrayan/myMovies-case-study/main/Case_Study_Mejia_Brayan.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            ><button class="project_button">Case Study</button></a
+          >
+        </div>
+        <div class="project_items">
+          <header>
+            <h2>MeetUp App <i class="fa-solid fa-location-dot"></i></h2>
+          </header>
+          <p>
+            A serverless React Web App using React, following a BDD and TDD
+            approach. The PWA is designed for online and offline use.
+          </p>
+          <a
+            href="https://github.com/Mejiabrayan/MeetUp-App"
+            target="_blank"
+            rel="noopener noreferrer"
+            ><button class="project_button">See Source Code</button></a
+          >
+          <a href="#" target="_blank" rel="noopener noreferrer"
+            ><button class="project_button">Case Study</button></a
+          >
+        </div>
+
+        <div class="project_items">
+          <header>
+            <h2>Pokedex App <i class="fa-solid fa-gamepad"></i></h2>
+          </header>
+          <p>
+            Pokedex is a web app that displays Pokemon information using HTML,
+            CSS, and JavaScript, and retrieves data from an external API.
+          </p>
+          <div class="project-image" id="pokedex-image"></div>
+          <a
+            href="https://github.com/Mejiabrayan/Pokedex-data"
+            target="_blank"
+            rel="noopener noreferrer"
+            ><button class="project_button">See Source Code</button></a
           >
         </div>
       </div>
@@ -205,10 +249,7 @@
             open.
           </p>
           <a href="mailto:mejiabrayan@protonmail.com">
-            <i 
-            class="fa-solid fa-envelope"
-
-            ></i>
+            <i class="fa-solid fa-envelope"></i>
           </a>
 
           <a href="https://www.linkedin.com/in/brayan-mejia" target="_blank">
@@ -219,8 +260,12 @@
         <div class="contact-items">
           <h2>My Resume</h2>
           <p>You can download my Resume here.</p>
-          <a href="" target="_blank" alt="Link to download Resume in PDF format"
-            ><button class="project-btn">Download</button></a
+          <a
+            href="https://raw.githubusercontent.com/Mejiabrayan/RESUME/main/resume_mejia_brayan_.pdf"
+            target="_blank"
+            alt="Link to download Resume in PDF format"
+            rel="noopener noreferrer"
+            ><button class="project-btn">Download <i class="fa-solid fa-download"></i></button></a
           >
         </div>
       </div>
@@ -230,14 +275,22 @@
     <footer class="footer">
       <p>Find me on</p>
       <div class="social-media">
-        <a href="https://github.com/Mejiabrayan/" target="_blank">
+        <a
+          href="https://github.com/Mejiabrayan/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <img
             class="footer-item-git"
             src="img/githubRepo.svg"
             alt="Github-icon"
           />
         </a>
-        <a href="https://www.linkedin.com/in/brayan-mejia" target="_blank">
+        <a
+          href="https://www.linkedin.com/in/brayan-mejia"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <img
             class="footer-item-linkedin"
             src="img/linkedIn.svg"
